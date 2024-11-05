@@ -1,0 +1,6 @@
+URL="https://gist.githubusercontent.com/sebiglesias/ea2faa92f4b25a79f811104584e91efb/raw/02378f041ae64d3d021031efeb1572cbddfc2fc7/test-web-server-log.txt"
+ARCHIVO="web-server-log.txt"
+curl -o $ARCHIVO $URL
+grep " 200 " $ARCHIVO >> ok.txt
+grep " 500 " $ARCHIVO >> errors.txt
+echo "Proceso completado: archivos ok.txt y errors.txt generados."
